@@ -1,0 +1,24 @@
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import random</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">a = random.randint(1, 100) #1から100までのランダムに数字を生成する。</li>
+    <li style="background-color:#EEF;">count = 1</li>
+    <li style="background-color:#EFF;">print("=*"*10)</li>
+    <li style="background-color:#EEF;">print("  数字ゲーム")</li>
+    <li style="background-color:#EFF;">print("=*"*10)</li>
+    <li style="background-color:#EEF;">print()</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">while(True): #while条件文がtrueの場合、無限に再生し、正解を当てた時breakという文字を入力して実行を中止する。</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;b = int(input("[%d] 数字を入力してなさい！ : " % count)) #%dにカウント値を入れる。</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if a == b:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解です！") #bが正解のaと同じなら「正解」と入力される。</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif a &gt; b:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("UP") #bが正解のaより大ければ「UP」と入力される。</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif a &lt; b:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("DOWN") #bが正解のaより小さければ「DOWN」と入力される。</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;count += 1 #正解の回数を１ずつカウントする。</li>
+    </ol></code>
