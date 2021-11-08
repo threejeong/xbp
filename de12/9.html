@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>XBPのページ</title>
+</head>
+
+<body>
+<div>
+<h1>python課題</h1>
+<h2>「プログラミングでこんなことはできないか？」</h2>
+<h3>天気予報のプログラム<br></h3>
+<h3>①ソースコード</h3>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import requests</li>
+    <li style="background-color:#EEF;">from bs4 import BeautifulSoup</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">def Weather(AreaCode):</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;url = "https://weather.yahoo.co.jp/weather/jp/13/" + str(AreaCode) + ".html"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;r = requests.get(url)</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;soup = BeautifulSoup(r.text, 'html.parser') # 自分の環境で扱えるように解析、変換することをparseと言います。そしてパースする処理をまとめたプログラムのことをパーサー(parser)といいます。</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;rs = soup.find(class_='forecastCity')</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;rs = [i.strip() for i in rs.text.splitlines()]</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;rs = [i for i in rs if i != ""]</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(rs[0] + "の天気は" + rs[1] + "で、最高気温は" +rs[2] + "最低気温は" +rs[3] + "です。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ rs[18] + "の天気は" + rs[19] + "で、最高気温は" + rs[20] +"最低気温は" +rs[21] + "です。")</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">Weather(4510)　＃ここに地域コードを入れる。</li>
+    <li style="background-color:#EFF;">#地域コード→　東京「4410」、大島「4420」、八丈島「4430」、父島「4440」</li>
+    </ol></code>
+<h3>メモ</h3>
+['6月29日(火)','曇り','26℃[-3]','20℃[-1]','時間','0-6','6-12','12-18','18-24','降水',
+'---','---','30％','30％','風：','北の風後東の風２３区西部では北の風やや強く','波：','1メートル後0.5メートル',
+'6月30日(水)','曇り','26℃[0]','21℃[+1]','時間','0-6','6-12','12-18','18-24','降水','10％','10％','20％','20％',
+'風：','北の風後東の風','波：','0.5メートル']<br>
+
+→リスト内の要素は左から0始まりでアクセスできる。rs[ ここに入れる ]<br>
+
+<h3>③できなかったこと</h3>
+<div>なぜか東京以外の地域は、コードを入れるとエラーになってしまう。urlも変えて入れてみたが、そうすると東京もエラーになってしまった。</div>
+<h3>参考</h3>
+<ul>
+    <li><a href="https://www.ishilog.com/python-scraping-yahoo-weather/" target="_blank">【Python】Yahoo天気予報をスクレイピングしてデータを入手する</a><br></li>
+</ul>
+</body>
+</div>
