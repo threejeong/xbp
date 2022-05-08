@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>XBPのページ</title>
+    
+
+</head>
+<body> 
+    <div>
+        <h2>課題１</h2>
+        <h3>授業中に作ったプログラム</h3>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">const int DIR  = 8;</li>
+            <li style="background-color:#EEF;">const int STEP = 9;</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">void setup() {</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pinMode(DIR, OUTPUT);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;pinMode(STEP, OUTPUT);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;digitalWrite(DIR, LOW);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, LOW);</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">}</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">void loop() {</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;for (int i=0; i &lt;= 50; i++){</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;clockwise(5000);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;for (int i=0; i &lt;= 50; i++){</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;counter_clockwise(5000);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EEF;">}</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">void clockwise(int delaytime){</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(DIR, HIGH);//HIGHは時計回り</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, HIGH);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, LOW);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">}</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">void counter_clockwise(int delaytime){</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;digitalWrite(DIR, LOW);//</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, HIGH);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, LOW);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+            <li style="background-color:#EEF;">}</li>
+            </ol></code>
+
+        <h2>グループワークのまとめ</h2>
+        <h4>＜how might we・・・？/yes．and＞</h4>
+        →どうすれば私たちは〜できそう？<br>
+        私たちはサウナで整った人に出会った。（その人が整うという表現を使うことがわかった。）<br>
+        ↓<br>
+        整うという表現ははっきり説明できないことがわかった。<br>
+        ↓<br>
+        整うという表現は、どのような状態に使うのかを考えれば、サウナで整った人の気持ちも理解できるのではないかと考えた。<br>
+
+        <h4>「整う」</h4>
+        <ul>
+            <li>整うというのはリラックス（落ち着く）できた時に使うことがわかった。</li>
+            <li>何も考えずに、ぼーっとする状態だということがわかった。</li>
+            <li>行動せず、気持ちが一定で上下が無いことがわかった。（無意識）</li>
+            <li>ブランコやシーソーのように目的がなく、他の人が見たら時間の無駄だと考えてしまう行動や気持ちだということがわかった。</li>
+        </ul>
+        <img src="images/IMG_6595.png" width="30%"><br>
+
