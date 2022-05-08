@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>XBPのページ</title>
+    
+
+</head>
+<body> 
+    <div>
+        <h2>課題１</h2>
+        <h3>授業中に作ったプログラム</h3>
+
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">#include &lt;Adafruit_NeoPixel.h&gt;</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">#define PIN 9   //Arduinoで使うピン</li>
+            <li style="background-color:#EEF;">#define NUMPIXELS      5//LEDの数。</li>
+            <li style="background-color:#EFF;">int brightness=50;//明るさ</li>
+            <li style="background-color:#EEF;">int red_value=0;//赤要素</li>
+            <li style="background-color:#EFF;">int red_target=0;//赤要素の変化_目標値</li>
+            <li style="background-color:#EEF;">int green_value=0;//緑要素</li>
+            <li style="background-color:#EFF;">int green_target=0;//緑要素の変化_目標値</li>
+            <li style="background-color:#EEF;">int blue_value=0;//青要素</li>
+            <li style="background-color:#EFF;">int blue_target=0;//青要素の変化_目標値</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">boolean disp=true;</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">void setup()</li>
+            <li style="background-color:#EEF;">{</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pixels.begin(); // NeoPixel出力ピンの初期化</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.setBrightness(brightness);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pinMode(PIN,OUTPUT);</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;red_value=255;</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;red_target=random(0,255);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;green_value=0;</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;green_target=random(0,255);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;blue_value=180;</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;blue_target=random(0,255);</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;for(int i=0; i &lt; NUMPIXELS; i++){</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pixels.setPixelColor(i,pixels.Color(red_value,green_value,blue_value));</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pixels.show(); </li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">}</li>
+            <li style="background-color:#EEF;"></li>
+            </ol></code>
+            <h3>グループワークのまとめ</h3>
+            <h4>負</h4>
+            いろんな意見の中、電車での移動時間が退屈で暇だということの意見があった。<br>
+            さらに移動中にスマホの充電がなくなると、何にもできなくなり無駄だと感じるようになるという推測をした。<br>
+            <h4>正</h4>
+            サウナで整う時は、何にも考えなくても良いという意見があった。<br>
+            ここで、「整う」という言葉についての質問があった。<br>
+            整うという言葉は最近よく使っていて、言葉で表現できない状態だということがわかった。<br>
+            <h3>POV</h3>
+            <img src="images/pov1.png" width="60%"><br>
+
+
+
