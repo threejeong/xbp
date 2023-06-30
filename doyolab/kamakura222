@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>관광 어플리케이션</title>
+  <style>
+    .destination-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .destination-list li {
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    
+    .destination-info {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+  <script>
+    function showDestinationInfo(destinationId) {
+      // 선택한 여행지의 정보를 표시하는 함수
+      var infoDiv = document.getElementById('destination-info-' + destinationId);
+      var infoDisplay = infoDiv.style.display;
+      
+      if (infoDisplay === 'none') {
+        infoDiv.style.display = 'block';
+      } else {
+        infoDiv.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>관광 어플리케이션</h1>
+  
+  <h2>여행지 목록</h2>
+  <ul class="destination-list">
+    <li onclick="showDestinationInfo(1)">여행지 1</li>
+    <li onclick="showDestinationInfo(2)">여행지 2</li>
+    <li onclick="showDestinationInfo(3)">여행지 3</li>
+  </ul>
+  
+  <div id="destination-info-1" class="destination-info">
+    <h3>여행지 1 정보</h3>
+    <p>여행지 1의 상세 정보를 여기에 표시합니다.</p>
+  </div>
+  
+  <div id="destination-info-2" class="destination-info">
+    <h3>여행지 2 정보</h3>
+    <p>여행지 2의 상세 정보를 여기에 표시합니다.</p>
+  </div>
+  
+  <div id="destination-info-3" class="destination-info">
+    <h3>여행지 3 정보</h3>
+    <p>여행지 3의 상세 정보를 여기에 표시합니다.</p>
+  </div>
+</body>
+</html>
